@@ -1,0 +1,39 @@
+<template>
+    <div class="sm-home">
+        <div class="sm-home-wrapper">
+            <h1>首页</h1>
+            <router-link to="{{MainUrl}}">去ReadMe学习下如何使用
+            </router-link>
+        </div>
+    </div>
+</template> 
+<script>
+import {Link} from 'san-router'; 
+export default {
+    components: {
+        'router-link': Link
+    },
+    initData() {
+        return {
+            MainUrl: '/Main'
+        };
+    },
+    
+    inited() {
+        
+    }
+};  
+</script> 
+<style lang="stylus">
+@require '../src/css/variable.styl'
+.sm-home
+    background-color: $md-colors.blue500
+    margin: 0
+    height: 300px
+    padding: 20px
+    
+    .sm-home-wrapper
+       color: #fff
+    h1 
+        margin: 0
+</style> 
