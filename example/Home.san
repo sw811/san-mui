@@ -22,6 +22,7 @@ export default {
     inited() {
         
     }
+
 };  
 </script> 
 <style lang="stylus">

@@ -364,3 +364,42 @@ export default {
 };
 </script>
 ```
+
+菜单可以支持多级嵌套：
+
+> 给 `MenuItem` 设置 `cascade` 属性，并在插入 `submenu` 插槽
+
+```san 多级嵌套项目实测
+<template>
+    <div style="display: flex; align-items: flex-start">
+        <sm-paper>
+            <sm-menu style="min-width: 15rem">
+                
+            </sm-menu>
+        </sm-paper>
+    </div>
+</template>
+<script>
+import {MenuItem, Menu} from '../../src/Menu';
+import Icon from '../../src/Icon';
+import Divider from '../../src/Divider';
+import Paper from '../../src/Paper';
+import '../../src/Menu/index.styl';
+import '../../src/Icon/Icon.styl';
+import '../../src/Divider/Divider.styl';
+import '../../src/Paper/Paper.styl';
+
+export default {
+    components: {
+        'sm-menu': Menu,
+        'sm-menu-item': MenuItem,
+        'sm-paper': Paper,
+        'sm-icon': Icon,
+        'sm-divider': Divider
+    },
+    initData() {
+        
+    }
+};
+</script>
+```
